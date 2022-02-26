@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: '8d749137-0050-4b04-9559-14a9fec4c6bc'
   imageRepository: 'mnginx'
   containerRegistry: 'manishaacr1.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: 'Dockerfile'
   tag: 1
   imagePullSecret: 'manishaacr11727d72f-auth'
 
@@ -70,8 +70,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/deployment.yml
-                $(Pipeline.Workspace)/manifests/service.yml
+                $(Pipeline.Workspace)deployment.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
