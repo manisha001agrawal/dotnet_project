@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mnginx 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mnginx
+  template:
+    metadata:
+      labels:
+        app: mnginx 
+    spec:
+      containers:
+        - name: mnginx 
+          image: manishaacr1.azurecr.io/mnginx
+          ports:
+          - containerPort: 80
