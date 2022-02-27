@@ -15,7 +15,7 @@ variables:
   imageRepository: 'mnginx'
   containerRegistry: 'manishaacr1.azurecr.io'
   dockerfilePath: 'Dockerfile'
-  tag: '3'
+  tag: '$(Build.BuildId)'
   imagePullSecret: 'manishaacr124248541-auth'
 
   # Agent VM image name
