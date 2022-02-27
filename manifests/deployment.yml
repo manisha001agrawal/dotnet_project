@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: mnginx 
-          image: manishaacr1.azurecr.io/mnginx:2
+          image: manishaacr1.azurecr.io/mnginx
           ports:
           - containerPort: 80
