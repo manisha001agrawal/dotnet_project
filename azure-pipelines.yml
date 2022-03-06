@@ -11,12 +11,11 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '4f335008-e998-4be1-be87-e0baa0021a1b'
+  dockerRegistryServiceConnection: 'a479c559-c7b2-49fc-be00-39ab0e839926'
   imageRepository: 'mnginx'
-  containerRegistry: 'manishaacr1.azurecr.io'
-  dockerfilePath: 'Dockerfile'
+  containerRegistry: 'acr0012.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'manishaacr124248541-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
