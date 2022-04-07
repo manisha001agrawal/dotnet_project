@@ -19,6 +19,9 @@ spec:
           image: myacr110.azurecr.io/manisha001agrawal/dotnet_project:5
           ports:
             - containerPort: 80
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: docker-hub
 ---
 apiVersion: v1
 kind: Service
