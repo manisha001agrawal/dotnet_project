@@ -18,6 +18,6 @@ jobs:
     - name: Build and push
       # uses: docker/build-push-action@v4
       run: |
-        docker build -t manisha001agrawal/java_app:latest .
+        docker build -t .\Dockerfile manisha001agrawal/java_app:latest .
         docker push manisha001agrawal/java_app:latest
       
